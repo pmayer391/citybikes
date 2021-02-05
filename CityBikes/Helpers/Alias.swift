@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias CityBikesAPIHandler = (_ weatherData: CityBikeData?, _ errorMessage: String?) -> ()
+typealias CityBikesAPIHandler = (_ weatherData: CityBikeResponse?, _ errorMessage: String?) -> ()

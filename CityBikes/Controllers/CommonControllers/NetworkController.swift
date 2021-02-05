@@ -16,21 +16,20 @@ class NetworkController{
         guard let url = URL(string: "http://api.citybik.es/v2/networks") else {return handler(nil, "Bad URL String")}
         let request = URLRequest(url:url)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error == nil, let data = data{
-                let cityBikeData = self.parseCityBikeData(data)
+            if error == nil, let data = data, let cityBikeData = self.parseCityBikeData(data) {
                 handler(cityBikeData, nil)
             } else {
-                handler(nil, "API Call Failed")
+                handler(nil, "Sorry, unable to retrieve data, please check your internet connection.")
                 debugPrint("API ERROR: \(error?.localizedDescription ?? "")")
             }
         }.resume()
     }
 
     //MARK: - JSON PARSERS
-    private func parseCityBikeData(_ data: Data) -> CityBikeData? {
+    private func parseCityBikeData(_ data: Data) -> CityBikeResponse? {
         let decoder = JSONDecoder()
         do {
-            return try decoder.decode(CityBikeData.self, from: data)
+            return try decoder.decode(CityBikeResponse.self, from: data)
         } catch {
             debugPrint("JSON ERROR: \(error.localizedDescription)")
         }

@@ -1,9 +1,8 @@
 //
 //  NavBarView.swift
-//  eDocsNavPOC
+//  CityBikes
 //
-//  Created by Sigurd Paul Mayer on 10/29/20.
-//  Copyright © 2020 Sigurd Paul Mayer. All rights reserved.
+//  Created by Sigurd Paul Mayer on 2/4/21.
 //
 
 import Foundation
@@ -14,8 +13,14 @@ class NavBarView : UIView{
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var btnRefresh: UIButton!
+    @IBOutlet weak var lblTitle: UILabel!
     
-    var navController : NavController!
+    var navController: NavController!
+    var title: String = ""{
+        didSet{
+            lblTitle.text = title
+        }
+    }
     
     //Mark: Class Functions
     override init(frame: CGRect) {

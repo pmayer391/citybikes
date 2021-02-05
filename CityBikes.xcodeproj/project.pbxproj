@@ -8,14 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		F8C811C425CC7ECC00E5B5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */; };
-		F8C811C625CC7ECC00E5B5F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811C525CC7ECC00E5B5F8 /* SceneDelegate.swift */; };
-		F8C811C825CC7ECC00E5B5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811C725CC7ECC00E5B5F8 /* ViewController.swift */; };
 		F8C811CB25CC7ECC00E5B5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C811C925CC7ECC00E5B5F8 /* Main.storyboard */; };
 		F8C811CE25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8C811CC25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld */; };
 		F8C811D025CC7ECE00E5B5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */; };
 		F8C811D325CC7ECE00E5B5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C811D125CC7ECE00E5B5F8 /* LaunchScreen.storyboard */; };
 		F8C811DE25CC7ECE00E5B5F8 /* CityBikesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811DD25CC7ECE00E5B5F8 /* CityBikesTests.swift */; };
 		F8C811E925CC7ECE00E5B5F8 /* CityBikesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811E825CC7ECE00E5B5F8 /* CityBikesUITests.swift */; };
+		F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120825CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120925CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120A25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8120B25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8120C25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8121425CC850F00E5B5F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121325CC850F00E5B5F8 /* NetworkService.swift */; };
+		F8C8121525CC850F00E5B5F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121325CC850F00E5B5F8 /* NetworkService.swift */; };
+		F8C8121625CC850F00E5B5F8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121325CC850F00E5B5F8 /* NetworkService.swift */; };
+		F8C8121F25CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122025CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122325CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122425CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122F25CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8123A25CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8123B25CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8124025CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8124125CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8124225CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8125725CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8C8125825CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8C8125925CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +63,6 @@
 /* Begin PBXFileReference section */
 		F8C811C025CC7ECC00E5B5F8 /* CityBikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8C811C525CC7ECC00E5B5F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8C811C725CC7ECC00E5B5F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8C811CA25CC7ECC00E5B5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8C811CD25CC7ECC00E5B5F8 /* CityBikes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CityBikes.xcdatamodel; sourceTree = "<group>"; };
 		F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +74,15 @@
 		F8C811E425CC7ECE00E5B5F8 /* CityBikesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBikesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C811E825CC7ECE00E5B5F8 /* CityBikesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesUITests.swift; sourceTree = "<group>"; };
 		F8C811EA25CC7ECE00E5B5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C8120525CC83D700E5B5F8 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F8C8120625CC83D800E5B5F8 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		F8C8121325CC850F00E5B5F8 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F8C8121D25CC852500E5B5F8 /* Alias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		F8C8121E25CC852500E5B5F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F8C8122E25CC92F400E5B5F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F8C8123825CCA25000E5B5F8 /* NavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NaBarView.xib; sourceTree = "<group>"; };
+		F8C8125625CCA32100E5B5F8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +133,12 @@
 		F8C811C225CC7ECC00E5B5F8 /* CityBikes */ = {
 			isa = PBXGroup;
 			children = (
+				F8C8120025CC835B00E5B5F8 /* Models */,
+				F8C8120125CC836F00E5B5F8 /* Views */,
+				F8C8120225CC837A00E5B5F8 /* Controllers */,
+				F8C8120325CC839400E5B5F8 /* Services */,
+				F8C8120425CC839E00E5B5F8 /* Helpers */,
 				F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */,
-				F8C811C525CC7ECC00E5B5F8 /* SceneDelegate.swift */,
-				F8C811C725CC7ECC00E5B5F8 /* ViewController.swift */,
 				F8C811C925CC7ECC00E5B5F8 /* Main.storyboard */,
 				F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */,
 				F8C811D125CC7ECE00E5B5F8 /* LaunchScreen.storyboard */,
@@ -129,6 +164,82 @@
 				F8C811EA25CC7ECE00E5B5F8 /* Info.plist */,
 			);
 			path = CityBikesUITests;
+			sourceTree = "<group>";
+		};
+		F8C8120025CC835B00E5B5F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8C8120125CC836F00E5B5F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8126125CCA61300E5B5F8 /* TableViewCells */,
+				F8C8126025CCA60A00E5B5F8 /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8C8120225CC837A00E5B5F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8123725CCA22800E5B5F8 /* CommonControllers */,
+				F8C8123625CCA21D00E5B5F8 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F8C8120325CC839400E5B5F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8121325CC850F00E5B5F8 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F8C8120425CC839E00E5B5F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8121D25CC852500E5B5F8 /* Alias.swift */,
+				F8C8122E25CC92F400E5B5F8 /* Colors.swift */,
+				F8C8121E25CC852500E5B5F8 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F8C8123625CCA21D00E5B5F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8120525CC83D700E5B5F8 /* MainVC.swift */,
+				F8C8120625CC83D800E5B5F8 /* MainVC.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8C8123725CCA22800E5B5F8 /* CommonControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8125625CCA32100E5B5F8 /* NavController.swift */,
+			);
+			path = CommonControllers;
+			sourceTree = "<group>";
+		};
+		F8C8126025CCA60A00E5B5F8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8123825CCA25000E5B5F8 /* NavBarView.swift */,
+				F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F8C8126125CCA61300E5B5F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +345,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C8124025CCA25700E5B5F8 /* NaBarView.xib in Resources */,
 				F8C811D325CC7ECE00E5B5F8 /* LaunchScreen.storyboard in Resources */,
+				F8C8120A25CC83D800E5B5F8 /* MainVC.xib in Resources */,
 				F8C811D025CC7ECE00E5B5F8 /* Assets.xcassets in Resources */,
 				F8C811CB25CC7ECC00E5B5F8 /* Main.storyboard in Resources */,
 			);
@@ -244,6 +357,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C8120B25CC83D800E5B5F8 /* MainVC.xib in Resources */,
+				F8C8124125CCA25700E5B5F8 /* NaBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +366,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C8120C25CC83D800E5B5F8 /* MainVC.xib in Resources */,
+				F8C8124225CCA25700E5B5F8 /* NaBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +378,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C811C825CC7ECC00E5B5F8 /* ViewController.swift in Sources */,
+				F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */,
 				F8C811CE25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld in Sources */,
+				F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8C8122F25CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8C8125725CCA32100E5B5F8 /* NavController.swift in Sources */,
+				F8C8121425CC850F00E5B5F8 /* NetworkService.swift in Sources */,
 				F8C811C425CC7ECC00E5B5F8 /* AppDelegate.swift in Sources */,
-				F8C811C625CC7ECC00E5B5F8 /* SceneDelegate.swift in Sources */,
+				F8C8121F25CC852500E5B5F8 /* Alias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C8122325CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8C8122025CC852500E5B5F8 /* Alias.swift in Sources */,
 				F8C811DE25CC7ECE00E5B5F8 /* CityBikesTests.swift in Sources */,
+				F8C8123A25CCA25000E5B5F8 /* NavBarView.swift in Sources */,
+				F8C8121525CC850F00E5B5F8 /* NetworkService.swift in Sources */,
+				F8C8120825CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8C8125825CCA32100E5B5F8 /* NavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +409,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C8122425CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */,
 				F8C811E925CC7ECE00E5B5F8 /* CityBikesUITests.swift in Sources */,
+				F8C8123B25CCA25000E5B5F8 /* NavBarView.swift in Sources */,
+				F8C8121625CC850F00E5B5F8 /* NetworkService.swift in Sources */,
+				F8C8120925CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8C8125925CCA32100E5B5F8 /* NavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

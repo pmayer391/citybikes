@@ -60,12 +60,11 @@ class MainVC: UIViewController {
         for network in networkList {
             if let lat = network.location?.latitude, let long = network.location?.longitude{
                 let annotation = MKPointAnnotation()
-                let coord = CLLocationCoordinate2D(latitude: lat, longitude: long)
-                annotation.coordinate = coord
+                let coords = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                annotation.coordinate = coords
                 annotation.title = network.name
-                //TODO: This is not working with accessbilityHit
-                annotation.accessibilityHint = network.id
                 network.annotation = annotation
+                network.coords = coords
                 mapView.addAnnotation(annotation)
             }
         }
@@ -79,7 +78,6 @@ class MainVC: UIViewController {
                 }
             } else {
                 self.networkList = data?.networks ?? []
-                debugPrint("NetWorks \(self.networkList)")
                 DispatchQueue.main.async {
                     //TODO: Store In Core Data
                     self.stopLoadingAnimation()
@@ -118,11 +116,7 @@ class MainVC: UIViewController {
     }
     
     func scrollToExpandedCell(_ indexPath : IndexPath) {
-        if let cell = cityBikeTableView.cellForRow(at: indexPath){
-            if !(cityBikeTableView.visibleCells.contains(cell)){
-                self.cityBikeTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-            }
-        }
+        self.cityBikeTableView.scrollToRow(at: indexPath, at: .none, animated: true)
     }
     
     func processSelectedValue(selectedIndexPath: IndexPath, updateMap: Bool = true){
@@ -150,7 +144,9 @@ class MainVC: UIViewController {
             }
         }
         cityBikeTableView.reloadRows(at: refreshIndexes, with: .automatic)
-        scrollToExpandedCell(selectedIndexPath)
+        if !updateMap{
+            scrollToExpandedCell(selectedIndexPath)
+        }
     }
     
     @objc func didTapOnRefresh(_ sender: Any){
@@ -163,18 +159,21 @@ extension MainVC: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotationView = view as? MKMarkerAnnotationView {
             annotationView.markerTintColor = .YellowLime()
-
-            //TODO: Remove Test Code when done testing accessibilityHint
-            for network in networkList{
-                for subView in annotationView.subviews{
-                    if network.id == subView.accessibilityHint{
-                        print("Hurray")
-                    }
-                }
-
-            }
+            let selectedCoords = mapView.selectedAnnotations.first?.coordinate
             
-            if linkListFromMap, let selectedNetwork = networkList.filter({$0.id?.lowercased().trimmed == annotationView.accessibilityHint?.trimmed.lowercased()}).first, let index = networkList.firstIndex(where: {$0.id?.lowercased().trimmed == selectedNetwork.id?.lowercased().trimmed}) {
+//            //TODO: Remove Test Code when done testing accessibilityHint
+//            for network in networkList{
+//                for subView in annotationView.subviews{
+//                    if network.id == subView.accessibilityHint{
+//                        print("Hurray")
+//                    }
+//                    let blah = CLLocationCoordinate2D(latitude: network.location?.latitude ?? 0.0, longitude: network.location?.latitude ?? 0.0)
+//                }
+//
+//            }
+            
+            //Compare selected Pin coords and retrieve the selected NetworkObj/IndexPath
+            if linkListFromMap, let selectedNetwork = networkList.filter({($0.coords?.latitude == selectedCoords?.latitude) && ($0.coords?.longitude == selectedCoords?.longitude)}).first, let index = networkList.firstIndex(where: {$0.id?.lowercased().trimmed == selectedNetwork.id?.lowercased().trimmed}) {
                 let selectedIndex = IndexPath(row: index, section: 0)
                 processSelectedValue(selectedIndexPath: selectedIndex, updateMap: false)
             } else{

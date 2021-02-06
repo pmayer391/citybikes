@@ -11,6 +11,7 @@ import CoreLocation
 
 class MainVC: UIViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var navBar: NavBarView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var loadingView: UIView!
@@ -18,13 +19,16 @@ class MainVC: UIViewController {
     @IBOutlet weak var rightBikeWheel: UIImageView!
     @IBOutlet weak var cityBikeTableView: UITableView!
     
+    //MARK: - Properties
     var locationManager: CLLocationManager!
     var currentLocationStr = ""
     var networkList: [Networks] = []
     var selectedNetwork = ""
     let cityImg = UIImage(named: "cityIcon")
-    var linkListFromMap = true
+    var updateListFromMap = true
+    var deselectListFromMap = true
     
+    //MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingView.isHidden = true
@@ -55,40 +59,9 @@ class MainVC: UIViewController {
 //        }
 //    }
     
-    func dropCityBikePins() {
-        mapView.removeAnnotations(mapView.annotations)
-        for network in networkList {
-            if let lat = network.location?.latitude, let long = network.location?.longitude{
-                let annotation = MKPointAnnotation()
-                let coords = CLLocationCoordinate2D(latitude: lat, longitude: long)
-                annotation.coordinate = coords
-                annotation.title = network.name
-                network.annotation = annotation
-                network.coords = coords
-                mapView.addAnnotation(annotation)
-            }
-        }
-    }
-    
-    func callCityBikeAPI(){
-        NetworkController.shared.getCityBikes { (data, errorString) in
-            if let error = errorString{
-                DispatchQueue.main.async {
-                    self.stopLoadingAnimation(error)
-                }
-            } else {
-                self.networkList = data?.networks ?? []
-                DispatchQueue.main.async {
-                    //TODO: Store In Core Data
-                    self.stopLoadingAnimation()
-                    self.dropCityBikePins()
-                    self.cityBikeTableView.reloadData()
-                    if self.cityBikeTableView.numberOfRows(inSection: 0) != 0 {
-                        self.cityBikeTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
-                    }
-                }
-            }
-        }
+    //MARK: - Refresh Functions
+    @objc func didTapOnRefresh(_ sender: Any){
+        loadDataWithAnimation()
     }
     
     func loadDataWithAnimation(){
@@ -115,14 +88,51 @@ class MainVC: UIViewController {
         }
     }
     
-    func scrollToExpandedCell(_ indexPath : IndexPath) {
-        self.cityBikeTableView.scrollToRow(at: indexPath, at: .none, animated: true)
+    //MARK: - API Functions
+    func callCityBikeAPI(){
+        NetworkController.shared.getCityBikes { (data, errorString) in
+            if let error = errorString{
+                DispatchQueue.main.async {
+                    self.stopLoadingAnimation(error)
+                }
+            } else {
+                self.networkList = data?.networks ?? []
+                DispatchQueue.main.async {
+                    //TODO: Store In Core Data
+                    self.stopLoadingAnimation()
+                    self.dropCityBikePins()
+                    self.cityBikeTableView.reloadData()
+                    if self.cityBikeTableView.numberOfRows(inSection: 0) != 0 {
+                        self.cityBikeTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                    }
+                }
+            }
+        }
     }
     
+    //MARK: - Configure Map Pins
+    func dropCityBikePins() {
+        mapView.removeAnnotations(mapView.annotations)
+        for network in networkList {
+            if let lat = network.location?.latitude, let long = network.location?.longitude{
+                let annotation = MKPointAnnotation()
+                let coords = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                annotation.coordinate = coords
+                annotation.title = network.name
+                network.annotation = annotation
+                network.coords = coords
+                mapView.addAnnotation(annotation)
+            }
+        }
+    }
+    
+    //MARK: - Did Select City Functions
     func processSelectedValue(selectedIndexPath: IndexPath, updateMap: Bool = true){
         var refreshIndexes: [IndexPath] = []
         refreshIndexes.append(selectedIndexPath)
         let currentNetworkObj = networkList[selectedIndexPath.row]
+        updateListFromMap = true
+        deselectListFromMap = true
         //Previous Selected Indexes
         if !(selectedNetwork.isEmpty),
            let previousSelectedNetworkItem = networkList.filter({$0.id?.lowercased().trimmed == selectedNetwork.trimmed.lowercased()}).first, previousSelectedNetworkItem.id != currentNetworkObj.id ?? "", let index = networkList.firstIndex(where: {$0.id == selectedNetwork}){
@@ -135,11 +145,13 @@ class MainVC: UIViewController {
         if currentNetworkObj.isCellExpanded {
             currentNetworkObj.isCellExpanded = false
             selectedNetwork = ""
+            mapView.selectedAnnotations = []
         } else {
             currentNetworkObj.isCellExpanded = true
             selectedNetwork = currentNetworkObj.id ?? ""
             if updateMap, let annotation = currentNetworkObj.annotation{
-                linkListFromMap = false
+                updateListFromMap = false
+                deselectListFromMap = false
                 mapView.selectAnnotation(annotation, animated: true)
             }
         }
@@ -149,35 +161,29 @@ class MainVC: UIViewController {
         }
     }
     
-    @objc func didTapOnRefresh(_ sender: Any){
-        loadDataWithAnimation()
+    func scrollToExpandedCell(_ indexPath : IndexPath) {
+        self.cityBikeTableView.scrollToRow(at: indexPath, at: .none, animated: true)
     }
+    
 }
 
+//MARK: - Map Kit Delegate
 extension MainVC: MKMapViewDelegate{
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotationView = view as? MKMarkerAnnotationView {
             annotationView.markerTintColor = .YellowLime()
-            let selectedCoords = mapView.selectedAnnotations.first?.coordinate
-            
-//            //TODO: Remove Test Code when done testing accessibilityHint
-//            for network in networkList{
-//                for subView in annotationView.subviews{
-//                    if network.id == subView.accessibilityHint{
-//                        print("Hurray")
-//                    }
-//                    let blah = CLLocationCoordinate2D(latitude: network.location?.latitude ?? 0.0, longitude: network.location?.latitude ?? 0.0)
-//                }
-//
-//            }
-            
+            let selectedCoords = view.annotation?.coordinate
+            if let coordinates = selectedCoords{
+                let region = MKCoordinateRegion(center: coordinates, span: mapView.region.span)
+                mapView.setRegion(region, animated: true)
+            }
             //Compare selected Pin coords and retrieve the selected NetworkObj/IndexPath
-            if linkListFromMap, let selectedNetwork = networkList.filter({($0.coords?.latitude == selectedCoords?.latitude) && ($0.coords?.longitude == selectedCoords?.longitude)}).first, let index = networkList.firstIndex(where: {$0.id?.lowercased().trimmed == selectedNetwork.id?.lowercased().trimmed}) {
+            if updateListFromMap, let currentNetwork = networkList.filter({($0.coords?.latitude == selectedCoords?.latitude) && ($0.coords?.longitude == selectedCoords?.longitude)}).first, let index = networkList.firstIndex(where: {$0.id?.lowercased().trimmed == currentNetwork.id?.lowercased().trimmed}) {
                 let selectedIndex = IndexPath(row: index, section: 0)
                 processSelectedValue(selectedIndexPath: selectedIndex, updateMap: false)
             } else{
-                linkListFromMap = true
+                updateListFromMap = true
             }
         }
     }
@@ -185,26 +191,29 @@ extension MainVC: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         if let annotationView = view as? MKMarkerAnnotationView {
             annotationView.markerTintColor = .DarkBlue()
-            //TODO: Implement This method
-//            selectedNetwork = ""
-//            networkList.filter({$0.id?.lowercased().trimmed == selectedNetwork.trimmed.lowercased()}).first?.isCellExpanded = false
+            
+            //Compare selected Pin coords and retrieve the selected NetworkObj/IndexPath
+            if deselectListFromMap, !(selectedNetwork.isEmpty), let currentNetwork = networkList.filter({$0.id?.lowercased().trimmed == self.selectedNetwork.lowercased().trimmed}).first, let currentIndex = networkList.firstIndex(where: {$0.id?.lowercased().trimmed == currentNetwork.id?.lowercased().trimmed}) {
+                let selectedIndex = IndexPath(row: currentIndex, section: 0)
+                self.selectedNetwork = ""
+                currentNetwork.isCellExpanded = false
+                cityBikeTableView.reloadRows(at: [selectedIndex], with: .automatic)
+            } else{
+                deselectListFromMap = false
+            }
         }
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "cityPinAnnotation")
-        //TODO: This is not working either
-        if annotationView.accessibilityHint?.lowercased().trimmed == selectedNetwork.lowercased().trimmed{
-            annotationView.markerTintColor = .YellowLime()
-        } else{
-            annotationView.markerTintColor = .DarkBlue()
-        }
+        annotationView.markerTintColor = .DarkBlue()
         annotationView.glyphImage = cityImg
         return annotationView
     }
     
 }
 
+//MARK: - Core Location Delegate
 extension MainVC: CLLocationManagerDelegate{
     
 //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

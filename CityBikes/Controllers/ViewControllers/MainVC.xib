@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uao-vf-F6z">
-                    <rect key="frame" x="0.0" y="90" width="414" height="250"/>
+                    <rect key="frame" x="0.0" y="90" width="414" height="350"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-2k-UVS">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -76,7 +76,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="0.098476909099999996" green="0.1088398471" blue="0.29351234440000001" alpha="0.8489623274539877" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="0.22685007668711657" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="hpE-dR-Oev" secondAttribute="trailing" id="J6C-1g-qUR"/>
                                 <constraint firstItem="hpE-dR-Oev" firstAttribute="leading" secondItem="hRl-2k-UVS" secondAttribute="leading" id="Q8I-9c-bGq"/>
@@ -86,9 +86,9 @@
                             </constraints>
                         </view>
                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-oX-luZ">
-                            <rect key="frame" x="0.0" y="50" width="414" height="200"/>
+                            <rect key="frame" x="0.0" y="50" width="414" height="300"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="200" id="TAJ-nk-X1V"/>
+                                <constraint firstAttribute="height" constant="300" id="TAJ-nk-X1V"/>
                             </constraints>
                         </mapView>
                     </subviews>
@@ -101,19 +101,19 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XLb-bZ-LaU">
-                    <rect key="frame" x="0.0" y="340" width="414" height="556"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="440" width="414" height="456"/>
+                    <color key="backgroundColor" red="0.098476909099999996" green="0.1088398471" blue="0.29351234440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5s-fB-tHI">
-                    <rect key="frame" x="0.0" y="856" width="414" height="40"/>
-                    <color key="backgroundColor" red="0.098476909099999996" green="0.1088398471" blue="0.29351234440000001" alpha="0.1983799846625767" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="UyS-v8-w82"/>
+                        <constraint firstAttribute="height" constant="50" id="UyS-v8-w82"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.098476909099999996" green="0.1088398471" blue="0.29351234440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="R5s-fB-tHI" secondAttribute="bottom" id="6bS-dD-POk"/>
                 <constraint firstItem="Uao-vf-F6z" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8Nd-NT-yxg"/>

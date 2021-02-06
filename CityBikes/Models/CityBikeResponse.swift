@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 class CityBikeResponse : Codable {
     let networks : [Networks]?
@@ -28,6 +29,7 @@ class Networks : Codable {
     
     //UIProperties
     var isCellExpanded = false
+    var annotation: MKAnnotation?
 
     enum CodingKeys: String, CodingKey {
         case href = "href"

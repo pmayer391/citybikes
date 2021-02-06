@@ -27,9 +27,10 @@ class Networks : Codable {
     let location : Location?
     let name : String?
     
-    //UIProperties
+    //UI Local Properties
     var isCellExpanded = false
     var annotation: MKAnnotation?
+    var coords: CLLocationCoordinate2D?
 
     enum CodingKeys: String, CodingKey {
         case href = "href"

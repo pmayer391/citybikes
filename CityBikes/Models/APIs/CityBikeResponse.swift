@@ -22,6 +22,33 @@ class CityBikeResponse : NSObject, Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         networks = try values.decodeIfPresent([Networks].self, forKey: .networks)
     }
+    
+    func validNetworkListById(_ networkList: [Networks]) -> Bool{
+        let groupedNetworksById = networkList.group(by: {$0.id})
+        for (_, networks) in groupedNetworksById{
+            if networks.count > 1{
+                return false
+            }
+        }
+        return true
+    }
+    
+    func validNetworkListByLocation(_ networkList: [Networks]) -> Bool{
+        let groupedLatitude = networkList.group(by: {$0.location?.latitude})
+        let groupedLongitude = networkList.group(by: {$0.location?.longitude})
+        if groupedLatitude.count == groupedLongitude.count && groupedLatitude.count == groupedLatitude.count{
+            return true
+        }
+        return false
+    }
+    
+    func checkForValidCoords(_ coords: CLLocationCoordinate2D) -> Bool{
+        if (CLLocationCoordinate2DIsValid(coords)) {
+          return true
+        } else {
+          return false
+        }
+    }
 }
 
 class Networks : NSObject, Codable {

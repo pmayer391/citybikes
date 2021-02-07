@@ -39,18 +39,18 @@
 		F8C8125725CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
 		F8C8125825CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
 		F8C8125925CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8E178C625D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C725D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C825D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C925D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
 		F8E5AE4D25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
 		F8E5AE4E25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
 		F8E5AE4F25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
 		F8E5AE5025CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
 		F8E5AE5125CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
 		F8E5AE5225CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
-		F8E5AE6125CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE5F25CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift */; };
-		F8E5AE6225CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE5F25CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift */; };
-		F8E5AE6325CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE5F25CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift */; };
-		F8E5AE6425CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE6025CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift */; };
-		F8E5AE6525CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE6025CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift */; };
-		F8E5AE6625CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE6025CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift */; };
 		F8FC9D6025CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
 		F8FC9D6125CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
 		F8FC9D6225CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
@@ -100,10 +100,10 @@
 		F8C8123825CCA25000E5B5F8 /* NavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NaBarView.xib; sourceTree = "<group>"; };
 		F8C8125625CCA32100E5B5F8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F8E5AE5F25CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F8E5AE6025CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikeResponse.swift; sourceTree = "<group>"; };
 		F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesTVCell.swift; sourceTree = "<group>"; };
 		F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityBikesTVCell.xib; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 		F8FFA11C25CF4F5E006332AD /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F8E5AE5F25CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift */,
-				F8E5AE6025CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift */,
+				F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */,
+				F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */,
 				F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */,
 				F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */,
 			);
@@ -423,7 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B1679D25CD0820005CB3A1 /* NetworkController.swift in Sources */,
-				F8E5AE6125CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E178C625D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
 				F8E5AE5025CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
 				F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */,
 				F8FC9D6025CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
@@ -431,7 +431,7 @@
 				F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */,
 				F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */,
 				F8FC9D7A25CDE93D007FFE38 /* CityBikesTVCell.swift in Sources */,
-				F8E5AE6425CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8E178C925D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
 				F8FC9D8225CE0798007FFE38 /* CBImageView.swift in Sources */,
 				F8FFA11725CF3EBD006332AD /* CoreDataController.swift in Sources */,
 				F8C8122F25CC92F400E5B5F8 /* Colors.swift in Sources */,
@@ -450,8 +450,8 @@
 				F8C8122325CC852500E5B5F8 /* Extensions.swift in Sources */,
 				F8FC9D6125CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
 				F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */,
-				F8E5AE6225CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */,
-				F8E5AE6525CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8E178C725D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
 				F8C8122025CC852500E5B5F8 /* Alias.swift in Sources */,
 				F8E5AE5125CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
 				F8C811DE25CC7ECE00E5B5F8 /* CityBikesTests.swift in Sources */,
@@ -469,8 +469,8 @@
 				F8C8122425CC852500E5B5F8 /* Extensions.swift in Sources */,
 				F8FC9D6225CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
 				F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */,
-				F8E5AE6325CFB2410036A9C5 /* CDNetworks+CoreDataClass.swift in Sources */,
-				F8E5AE6625CFB2410036A9C5 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8E178C825D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
 				F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */,
 				F8E5AE5225CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
 				F8C811E925CC7ECE00E5B5F8 /* CityBikesUITests.swift in Sources */,

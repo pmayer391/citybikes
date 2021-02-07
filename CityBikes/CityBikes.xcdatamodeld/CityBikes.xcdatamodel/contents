@@ -9,12 +9,11 @@
     <entity name="CDNetworks" representedClassName=".CDNetworks" syncable="YES">
         <attribute name="href" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="isCellExpanded" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDLocation"/>
     </entity>
     <elements>
-        <element name="CDNetworks" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="CDLocation" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="CDNetworks" positionX="-350.43359375" positionY="32.1953125" width="128" height="103"/>
     </elements>
 </model>

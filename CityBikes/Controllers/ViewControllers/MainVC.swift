@@ -23,6 +23,7 @@ class MainVC: UIViewController {
     var locationManager: CLLocationManager!
     var currentLocationStr = ""
     var networkList: [Networks] = []
+    var cdNetworkList: [Networks] = []
     var selectedNetwork = ""
     let cityImg = UIImage(named: "cityIcon")
     var updateListFromMap = true
@@ -88,27 +89,40 @@ class MainVC: UIViewController {
         }
     }
     
+    func loadCoreDataNetworks(){
+        CoreDataController.shared.fetchNetworksOnBackground(mainThread: true) { (networksFromCD, nil) in
+            if let networksFromCoreData = networksFromCD{
+                self.cdNetworkList = networksFromCoreData
+                if !(self.cdNetworkList.isEmpty){
+                    self.networkList = self.cdNetworkList
+                    DispatchQueue.main.async {
+                        self.dropCityBikePins()
+                        self.cityBikeTableView.reloadData()
+                        if self.cityBikeTableView.numberOfRows(inSection: 0) != 0 {
+                            self.cityBikeTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     //MARK: - API Functions
     func callCityBikeAPI(){
         NetworkController.shared.getCityBikes { (data, errorString) in
             if let error = errorString{
+                //Load Core Data Networks on Backround
+                self.loadCoreDataNetworks()
                 DispatchQueue.main.async {
                     self.stopLoadingAnimation(error)
                 }
             } else {
                 self.networkList = data?.networks ?? []
+                //Store in Core Data On Background Thread
                 if !(self.networkList.isEmpty){
-                    CoreDataController.shared.saveNetworksOnBackground(self.networkList)
+                    CoreDataController.shared.refreshNetworksOnBackground(self.networkList)
                 }
-                
-                
-//                CoreDataController.shared.fetchEntity(entityName: "CDNetworks") { (cdNetworks) in
-
-//                }
-                
-                
                 DispatchQueue.main.async {
-                    //TODO: Store In Core Data
                     self.stopLoadingAnimation()
                     self.dropCityBikePins()
                     self.cityBikeTableView.reloadData()

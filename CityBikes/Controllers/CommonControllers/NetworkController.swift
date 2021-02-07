@@ -19,7 +19,7 @@ class NetworkController{
             if error == nil, let data = data, let cityBikeData = self.parseCityBikeData(data) {
                 handler(cityBikeData, nil)
             } else {
-                handler(nil, "Sorry, unable to retrieve data, please check your internet connection.")
+                handler(nil, "Our apologies, we're currently unable to retrieve the most current data. Please check your internet connection and retry at a later time.")
                 debugPrint("API ERROR: \(error?.localizedDescription ?? "")")
             }
         }.resume()

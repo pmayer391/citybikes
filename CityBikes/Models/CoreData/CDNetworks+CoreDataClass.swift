@@ -2,7 +2,7 @@
 //  CDNetworks+CoreDataClass.swift
 //  CityBikes
 //
-//  Created by Sigurd Paul Mayer on 2/6/21.
+//  Created by Sigurd Paul Mayer on 2/7/21.
 //
 //
 

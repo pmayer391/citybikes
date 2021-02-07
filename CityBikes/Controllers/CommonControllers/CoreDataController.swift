@@ -36,7 +36,7 @@ class CoreDataController {
     
     
     //MARK: - Functions
-    func fetchNetworksOnBackground(for mainThread: Bool, completion: @escaping NetworksCoreDataHandler){
+    func fetchNetworksOnBackground(mainThread: Bool, completion: @escaping NetworksCoreDataHandler){
         backgroundContext.perform{
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: self.networksEntity)
             do {
@@ -57,14 +57,22 @@ class CoreDataController {
         }
     }
     
-    func saveNetworksOnBackground(_ networks: [Networks]){
+    func refreshNetworksOnBackground(_ networks: [Networks]){
+        fetchNetworksOnBackground(mainThread: false) { (nil, cdNetworks) in
+            for cdNetwork in cdNetworks ?? [] {
+                self.backgroundContext.delete(cdNetwork)
+            }
+            self.saveNetworksOnBackground(networks)
+        }
+    }
+    
+    private func saveNetworksOnBackground(_ networks: [Networks]){
         self.backgroundContext.perform{
             self.backgroundContext.reset()
             for network in networks{
                 let cdNetwork = CDNetworks(context: self.backgroundContext)
                 cdNetwork.href = network.href
                 cdNetwork.id = network.id
-                cdNetwork.isCellExpanded = network.isCellExpanded
                 cdNetwork.name = network.name
                 let cdLocation = CDLocation(context: self.backgroundContext)
                 cdLocation.city = network.location?.city
@@ -83,14 +91,6 @@ class CoreDataController {
         }
     }
     
-    func clearNetworksOnBackground(){
-        fetchNetworksOnBackground(for: false) { (nil, cdNetworks) in
-            for cdNetwork in cdNetworks ?? [] {
-                self.backgroundContext.delete(cdNetwork)
-            }
-        }
-    }
-    
     private func getNetworkObjFromCDNetworkForMainThread(_ cdNetworks: [CDNetworks]) -> [Networks]{
         var networks: [Networks] = []
         for network in cdNetworks{
@@ -98,7 +98,6 @@ class CoreDataController {
             let networkObj = Networks()
             networkObj.href = cdObj?.id
             networkObj.id = cdObj?.id
-            networkObj.isCellExpanded = cdObj?.isCellExpanded ?? false
             networkObj.name = cdObj?.name
             let locationObj = Location()
             locationObj.city = cdObj?.location?.city

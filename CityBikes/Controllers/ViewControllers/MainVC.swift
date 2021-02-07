@@ -97,6 +97,16 @@ class MainVC: UIViewController {
                 }
             } else {
                 self.networkList = data?.networks ?? []
+                if !(self.networkList.isEmpty){
+                    CoreDataController.shared.saveNetworksOnBackground(self.networkList)
+                }
+                
+                
+//                CoreDataController.shared.fetchEntity(entityName: "CDNetworks") { (cdNetworks) in
+
+//                }
+                
+                
                 DispatchQueue.main.async {
                     //TODO: Store In Core Data
                     self.stopLoadingAnimation()

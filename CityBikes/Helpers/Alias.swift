@@ -8,3 +8,5 @@
 import Foundation
 
 typealias CityBikesAPIHandler = (_ weatherData: CityBikeResponse?, _ errorMessage: String?) -> ()
+
+typealias NetworksCoreDataHandler = (_ networks: [Networks]?,_ cdNetworks: [CDNetworks]?) -> ()

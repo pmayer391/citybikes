@@ -8,8 +8,11 @@
 import Foundation
 import MapKit
 
-class CityBikeResponse : Codable {
-    let networks : [Networks]?
+class CityBikeResponse : NSObject, Codable {
+    var networks : [Networks]?
+    
+    override init() {
+    }
 
     enum CodingKeys: String, CodingKey {
         case networks = "networks"
@@ -21,18 +24,23 @@ class CityBikeResponse : Codable {
     }
 }
 
-class Networks : Codable {
-    let href : String?
-    let id : String?
-    let location : Location?
-    let name : String?
-    
+class Networks : NSObject, Codable {
+//    let company : [String]?
+    var href : String?
+    var id : String?
+    var location : Location?
+    var name : String?
+
     //UI Local Properties
     var isCellExpanded = false
     var annotation: MKAnnotation?
     var coords: CLLocationCoordinate2D?
+    
+    override init() {
+    }
 
     enum CodingKeys: String, CodingKey {
+//        case company = "company"
         case href = "href"
         case id = "id"
         case location = "location"
@@ -41,6 +49,7 @@ class Networks : Codable {
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+//        company = try values.decodeIfPresent([String].self, forKey: .company)
         href = try values.decodeIfPresent(String.self, forKey: .href)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         location = try values.decodeIfPresent(Location.self, forKey: .location)
@@ -48,11 +57,14 @@ class Networks : Codable {
     }
 }
 
-class Location : Codable {
-    let city : String?
-    let country : String?
-    let latitude : Double?
-    let longitude : Double?
+class Location : NSObject, Codable {
+    var city : String?
+    var country : String?
+    var latitude : Double?
+    var longitude : Double?
+    
+    override init() {
+    }
 
     enum CodingKeys: String, CodingKey {
         case city = "city"

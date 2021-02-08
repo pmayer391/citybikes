@@ -62,6 +62,7 @@ class Networks : NSObject, Codable {
     var isCellExpanded = false
     var annotation: MKAnnotation?
     var coords: CLLocationCoordinate2D?
+    var distanceFromDeviceLocation: CLLocationDistance?
     
     override init() {
     }

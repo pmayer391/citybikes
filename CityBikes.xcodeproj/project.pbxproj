@@ -55,6 +55,9 @@
 		F8E178C925D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
 		F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
 		F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E4A33F25D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
+		F8E4A34025D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
+		F8E4A34125D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
 		F8E5AE4D25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
 		F8E5AE4E25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
 		F8E5AE4F25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
@@ -112,6 +115,7 @@
 		F8C8125625CCA32100E5B5F8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F8E4A33E25D0C26B006328F7 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikeResponse.swift; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 			children = (
 				F8C8123825CCA25000E5B5F8 /* NavBarView.swift */,
 				F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */,
+				F8E4A33E25D0C26B006328F7 /* DropDownView.swift */,
 				F8FC9D8125CE0798007FFE38 /* CBImageView.swift */,
 			);
 			path = CustomViews;
@@ -439,6 +444,7 @@
 				F8E5AE5025CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
 				F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */,
 				F8FC9D6025CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
+				F8E4A33F25D0C26B006328F7 /* DropDownView.swift in Sources */,
 				F8C811CE25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld in Sources */,
 				F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */,
 				F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */,
@@ -464,6 +470,7 @@
 				F8FC9D6125CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
 				F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */,
 				F8E178C725D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E4A34025D0C26B006328F7 /* DropDownView.swift in Sources */,
 				F8AAF58525D09DCA00397E95 /* CBImageView.swift in Sources */,
 				F8AAF57025D09D8C00397E95 /* NetworkController.swift in Sources */,
 				F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
@@ -487,6 +494,7 @@
 				F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */,
 				F8E178C825D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
 				F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8E4A34125D0C26B006328F7 /* DropDownView.swift in Sources */,
 				F8AAF57C25D09D9100397E95 /* CityBikesTVCell.swift in Sources */,
 				F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */,
 				F8E5AE5225CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,

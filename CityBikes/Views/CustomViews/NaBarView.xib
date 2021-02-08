@@ -11,7 +11,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavBarView" customModule="CityBikes" customModuleProvider="target">
             <connections>
                 <outlet property="btnRefresh" destination="A9D-Gt-ki1" id="50R-HS-ren"/>
+                <outlet property="btnSort" destination="aLW-Wi-E8a" id="Oa7-0x-qDf"/>
                 <outlet property="contentView" destination="MRu-Gj-UxU" id="AD5-Xw-EGp"/>
+                <outlet property="imgRefresh" destination="Ekl-fi-IVC" id="PKG-Bq-4vv"/>
+                <outlet property="imgSort" destination="LJh-nO-yjq" id="W5q-0r-E2p"/>
+                <outlet property="lblRefresh" destination="Uw0-kr-NJt" id="XGo-XG-yGa"/>
+                <outlet property="lblSort" destination="5eq-55-VmZ" id="sYv-6W-2PP"/>
                 <outlet property="lblTitle" destination="CBJ-X7-FH7" id="px0-N1-WfQ"/>
             </connections>
         </placeholder>
@@ -49,7 +54,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-BH-MAM">
                                     <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refreshIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ekl-fi-IVC">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refreshIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ekl-fi-IVC" customClass="CBImageView" customModule="CityBikes" customModuleProvider="target">
                                             <rect key="frame" x="3.5" y="-0.5" width="48" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="3Sj-HH-jAc"/>
@@ -67,9 +72,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="46"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <connections>
-                                        <action selector="refreshBtnPressed:" destination="-1" eventType="touchUpInside" id="GoJ-SQ-Ujq"/>
-                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,15 +87,62 @@
                                 <constraint firstAttribute="bottom" secondItem="Uw0-kr-NJt" secondAttribute="bottom" id="xMr-Zv-Z1C"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-bB-HpR">
+                            <rect key="frame" x="10" y="57" width="55" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eq-55-VmZ">
+                                    <rect key="frame" x="0.0" y="34" width="55" height="11"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Igd-yk-U3J">
+                                    <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sortIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-nO-yjq" customClass="CBImageView" customModule="CityBikes" customModuleProvider="target">
+                                            <rect key="frame" x="3.5" y="-0.5" width="48" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="OeG-vg-6Zy"/>
+                                                <constraint firstAttribute="width" constant="48" id="yIO-Os-qpL"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="LJh-nO-yjq" firstAttribute="centerY" secondItem="Igd-yk-U3J" secondAttribute="centerY" id="fVK-0h-ezc"/>
+                                        <constraint firstItem="LJh-nO-yjq" firstAttribute="centerX" secondItem="Igd-yk-U3J" secondAttribute="centerX" id="okc-Sd-8Xk"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLW-Wi-E8a">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="1zp-78-AkT"/>
+                                <constraint firstAttribute="trailing" secondItem="Igd-yk-U3J" secondAttribute="trailing" id="4YR-YO-ACq"/>
+                                <constraint firstAttribute="width" constant="55" id="4c3-lQ-KKh"/>
+                                <constraint firstItem="5eq-55-VmZ" firstAttribute="leading" secondItem="GWb-bB-HpR" secondAttribute="leading" id="NON-1i-8xx"/>
+                                <constraint firstAttribute="bottom" secondItem="5eq-55-VmZ" secondAttribute="bottom" id="bgV-Xp-yBH"/>
+                                <constraint firstItem="Igd-yk-U3J" firstAttribute="top" secondItem="GWb-bB-HpR" secondAttribute="top" id="h2W-Rr-JEA"/>
+                                <constraint firstItem="5eq-55-VmZ" firstAttribute="top" secondItem="Igd-yk-U3J" secondAttribute="bottom" id="lTz-fB-6vb"/>
+                                <constraint firstItem="Igd-yk-U3J" firstAttribute="leading" secondItem="GWb-bB-HpR" secondAttribute="leading" id="oNX-Rg-dW5"/>
+                                <constraint firstAttribute="trailing" secondItem="5eq-55-VmZ" secondAttribute="trailing" id="ynn-fi-e9a"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.098476909099999996" green="0.1088398471" blue="0.29351234440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="LIx-9R-VPc" firstAttribute="centerY" secondItem="1nc-iU-76N" secondAttribute="centerY" constant="17.5" id="2mH-aP-Zh2"/>
                         <constraint firstItem="i8X-5L-9ap" firstAttribute="leading" secondItem="1nc-iU-76N" secondAttribute="leading" constant="10" id="42i-wP-URX"/>
                         <constraint firstAttribute="trailing" secondItem="LIx-9R-VPc" secondAttribute="trailing" constant="10" id="CEl-Ae-B8B"/>
+                        <constraint firstItem="GWb-bB-HpR" firstAttribute="centerY" secondItem="1nc-iU-76N" secondAttribute="centerY" constant="17.5" id="NUi-TU-Syv"/>
                         <constraint firstItem="CBJ-X7-FH7" firstAttribute="centerY" secondItem="1nc-iU-76N" secondAttribute="centerY" constant="17.5" id="eee-In-HLX"/>
                         <constraint firstItem="i8X-5L-9ap" firstAttribute="centerY" secondItem="1nc-iU-76N" secondAttribute="centerY" constant="17.5" id="erY-f4-fw2"/>
                         <constraint firstItem="CBJ-X7-FH7" firstAttribute="centerX" secondItem="1nc-iU-76N" secondAttribute="centerX" id="ype-gV-bvn"/>
+                        <constraint firstItem="GWb-bB-HpR" firstAttribute="leading" secondItem="1nc-iU-76N" secondAttribute="leading" constant="10" id="zHo-yU-QSt"/>
                     </constraints>
                 </view>
             </subviews>
@@ -111,8 +160,17 @@
             <point key="canvasLocation" x="255.79710144927537" y="-18.080357142857142"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Ekl-fi-IVC">
+            <size key="intrinsicContentSize" width="32" height="32"/>
+        </designable>
+        <designable name="LJh-nO-yjq">
+            <size key="intrinsicContentSize" width="100" height="70"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="refreshIcon" width="64" height="64"/>
+        <image name="refreshIcon" width="32" height="32"/>
+        <image name="sortIcon" width="100" height="70"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

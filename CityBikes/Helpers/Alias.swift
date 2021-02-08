@@ -1,0 +1,12 @@
+//
+//  Alias.swift
+//  KnowInkCodeTest
+//
+//  Created by APRIL MAYER on 2/4/21.
+//
+
+import Foundation
+
+typealias CityBikesAPIHandler = (_ weatherData: CityBikeResponse?, _ errorMessage: String?) -> ()
+
+typealias NetworksCoreDataHandler = (_ networks: [Networks]?,_ cdNetworks: [CDNetworks]?) -> ()

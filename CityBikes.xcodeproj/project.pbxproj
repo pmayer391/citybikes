@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8AAF56425D091BE00397E95 /* CityBikeResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AAF56325D091BE00397E95 /* CityBikeResponseTests.swift */; };
+		F8AAF56825D09D5D00397E95 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FFA11625CF3EBD006332AD /* CoreDataController.swift */; };
+		F8AAF56C25D09D5E00397E95 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FFA11625CF3EBD006332AD /* CoreDataController.swift */; };
+		F8AAF57025D09D8C00397E95 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1679C25CD0820005CB3A1 /* NetworkController.swift */; };
+		F8AAF57425D09D8C00397E95 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1679C25CD0820005CB3A1 /* NetworkController.swift */; };
+		F8AAF57825D09D9100397E95 /* CityBikesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */; };
+		F8AAF57C25D09D9100397E95 /* CityBikesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */; };
+		F8AAF58025D09D9500397E95 /* CityBikesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */; };
+		F8AAF58125D09D9600397E95 /* CityBikesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */; };
+		F8AAF58525D09DCA00397E95 /* CBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D8125CE0798007FFE38 /* CBImageView.swift */; };
+		F8AAF58925D09DCA00397E95 /* CBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D8125CE0798007FFE38 /* CBImageView.swift */; };
+		F8B1679D25CD0820005CB3A1 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B1679C25CD0820005CB3A1 /* NetworkController.swift */; };
+		F8C811C425CC7ECC00E5B5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */; };
+		F8C811CB25CC7ECC00E5B5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C811C925CC7ECC00E5B5F8 /* Main.storyboard */; };
+		F8C811CE25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8C811CC25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld */; };
+		F8C811D025CC7ECE00E5B5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */; };
+		F8C811D325CC7ECE00E5B5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C811D125CC7ECE00E5B5F8 /* LaunchScreen.storyboard */; };
+		F8C811E925CC7ECE00E5B5F8 /* CityBikesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C811E825CC7ECE00E5B5F8 /* CityBikesUITests.swift */; };
+		F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120825CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120925CC83D800E5B5F8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8120525CC83D700E5B5F8 /* MainVC.swift */; };
+		F8C8120A25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8120B25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8120C25CC83D800E5B5F8 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8120625CC83D800E5B5F8 /* MainVC.xib */; };
+		F8C8121F25CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122025CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121D25CC852500E5B5F8 /* Alias.swift */; };
+		F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122325CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122425CC852500E5B5F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8121E25CC852500E5B5F8 /* Extensions.swift */; };
+		F8C8122F25CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8122E25CC92F400E5B5F8 /* Colors.swift */; };
+		F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8123A25CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8123B25CCA25000E5B5F8 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8123825CCA25000E5B5F8 /* NavBarView.swift */; };
+		F8C8124025CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8124125CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8124225CCA25700E5B5F8 /* NaBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */; };
+		F8C8125725CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8C8125825CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8C8125925CCA32100E5B5F8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C8125625CCA32100E5B5F8 /* NavController.swift */; };
+		F8E178C625D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C725D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C825D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */; };
+		F8E178C925D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */; };
+		F8E4A33F25D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
+		F8E4A34025D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
+		F8E4A34125D0C26B006328F7 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E4A33E25D0C26B006328F7 /* DropDownView.swift */; };
+		F8E5AE4D25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
+		F8E5AE4E25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
+		F8E5AE4F25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */; };
+		F8E5AE5025CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
+		F8E5AE5125CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
+		F8E5AE5225CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */; };
+		F8FC9D6025CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
+		F8FC9D6125CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
+		F8FC9D6225CD9A93007FFE38 /* CityBikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */; };
+		F8FC9D7A25CDE93D007FFE38 /* CityBikesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */; };
+		F8FC9D7B25CDE93D007FFE38 /* CityBikesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */; };
+		F8FC9D8225CE0798007FFE38 /* CBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FC9D8125CE0798007FFE38 /* CBImageView.swift */; };
+		F8FFA11725CF3EBD006332AD /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FFA11625CF3EBD006332AD /* CoreDataController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8C811DA25CC7ECE00E5B5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C811B825CC7ECC00E5B5F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C811BF25CC7ECC00E5B5F8;
+			remoteInfo = CityBikes;
+		};
+		F8C811E525CC7ECE00E5B5F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C811B825CC7ECC00E5B5F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C811BF25CC7ECC00E5B5F8;
+			remoteInfo = CityBikes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8AAF56325D091BE00397E95 /* CityBikeResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikeResponseTests.swift; sourceTree = "<group>"; };
+		F8B1679C25CD0820005CB3A1 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		F8C811C025CC7ECC00E5B5F8 /* CityBikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8C811CA25CC7ECC00E5B5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8C811CD25CC7ECC00E5B5F8 /* CityBikes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CityBikes.xcdatamodel; sourceTree = "<group>"; };
+		F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8C811D225CC7ECE00E5B5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8C811D425CC7ECE00E5B5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C811D925CC7ECE00E5B5F8 /* CityBikesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBikesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C811DF25CC7ECE00E5B5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C811E425CC7ECE00E5B5F8 /* CityBikesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBikesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C811E825CC7ECE00E5B5F8 /* CityBikesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesUITests.swift; sourceTree = "<group>"; };
+		F8C811EA25CC7ECE00E5B5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C8120525CC83D700E5B5F8 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F8C8120625CC83D800E5B5F8 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		F8C8121D25CC852500E5B5F8 /* Alias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		F8C8121E25CC852500E5B5F8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F8C8122E25CC92F400E5B5F8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F8C8123825CCA25000E5B5F8 /* NavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NaBarView.xib; sourceTree = "<group>"; };
+		F8C8125625CCA32100E5B5F8 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDNetworks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F8E4A33E25D0C26B006328F7 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikeResponse.swift; sourceTree = "<group>"; };
+		F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesTVCell.swift; sourceTree = "<group>"; };
+		F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityBikesTVCell.xib; sourceTree = "<group>"; };
+		F8FC9D8125CE0798007FFE38 /* CBImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBImageView.swift; sourceTree = "<group>"; };
+		F8FFA11625CF3EBD006332AD /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8C811BD25CC7ECC00E5B5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811D625CC7ECE00E5B5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811E125CC7ECE00E5B5F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8C811B725CC7ECC00E5B5F8 = {
+			isa = PBXGroup;
+			children = (
+				F8C811C225CC7ECC00E5B5F8 /* CityBikes */,
+				F8C811DC25CC7ECE00E5B5F8 /* CityBikesTests */,
+				F8C811E725CC7ECE00E5B5F8 /* CityBikesUITests */,
+				F8C811C125CC7ECC00E5B5F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8C811C125CC7ECC00E5B5F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C811C025CC7ECC00E5B5F8 /* CityBikes.app */,
+				F8C811D925CC7ECE00E5B5F8 /* CityBikesTests.xctest */,
+				F8C811E425CC7ECE00E5B5F8 /* CityBikesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8C811C225CC7ECC00E5B5F8 /* CityBikes */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8120025CC835B00E5B5F8 /* Models */,
+				F8C8120125CC836F00E5B5F8 /* Views */,
+				F8C8120225CC837A00E5B5F8 /* Controllers */,
+				F8C8120425CC839E00E5B5F8 /* Helpers */,
+				F8C811C325CC7ECC00E5B5F8 /* AppDelegate.swift */,
+				F8C811C925CC7ECC00E5B5F8 /* Main.storyboard */,
+				F8C811CF25CC7ECE00E5B5F8 /* Assets.xcassets */,
+				F8C811D125CC7ECE00E5B5F8 /* LaunchScreen.storyboard */,
+				F8C811D425CC7ECE00E5B5F8 /* Info.plist */,
+				F8C811CC25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld */,
+			);
+			path = CityBikes;
+			sourceTree = "<group>";
+		};
+		F8C811DC25CC7ECE00E5B5F8 /* CityBikesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8AAF56325D091BE00397E95 /* CityBikeResponseTests.swift */,
+				F8C811DF25CC7ECE00E5B5F8 /* Info.plist */,
+			);
+			path = CityBikesTests;
+			sourceTree = "<group>";
+		};
+		F8C811E725CC7ECE00E5B5F8 /* CityBikesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8C811E825CC7ECE00E5B5F8 /* CityBikesUITests.swift */,
+				F8C811EA25CC7ECE00E5B5F8 /* Info.plist */,
+			);
+			path = CityBikesUITests;
+			sourceTree = "<group>";
+		};
+		F8C8120025CC835B00E5B5F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8FFA11B25CF4F51006332AD /* APIs */,
+				F8FFA11C25CF4F5E006332AD /* CoreData */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8C8120125CC836F00E5B5F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8126125CCA61300E5B5F8 /* TableViewCells */,
+				F8C8126025CCA60A00E5B5F8 /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8C8120225CC837A00E5B5F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8123725CCA22800E5B5F8 /* CommonControllers */,
+				F8C8123625CCA21D00E5B5F8 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F8C8120425CC839E00E5B5F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8121D25CC852500E5B5F8 /* Alias.swift */,
+				F8C8122E25CC92F400E5B5F8 /* Colors.swift */,
+				F8C8121E25CC852500E5B5F8 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F8C8123625CCA21D00E5B5F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8120525CC83D700E5B5F8 /* MainVC.swift */,
+				F8C8120625CC83D800E5B5F8 /* MainVC.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8C8123725CCA22800E5B5F8 /* CommonControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8125625CCA32100E5B5F8 /* NavController.swift */,
+				F8B1679C25CD0820005CB3A1 /* NetworkController.swift */,
+				F8FFA11625CF3EBD006332AD /* CoreDataController.swift */,
+			);
+			path = CommonControllers;
+			sourceTree = "<group>";
+		};
+		F8C8126025CCA60A00E5B5F8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8C8123825CCA25000E5B5F8 /* NavBarView.swift */,
+				F8C8123F25CCA25700E5B5F8 /* NaBarView.xib */,
+				F8E4A33E25D0C26B006328F7 /* DropDownView.swift */,
+				F8FC9D8125CE0798007FFE38 /* CBImageView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F8C8126125CCA61300E5B5F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F8FC9D7825CDE93D007FFE38 /* CityBikesTVCell.swift */,
+				F8FC9D7925CDE93D007FFE38 /* CityBikesTVCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		F8FFA11B25CF4F51006332AD /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F8FC9D5F25CD9A93007FFE38 /* CityBikeResponse.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		F8FFA11C25CF4F5E006332AD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F8E178C425D08559001BCAE3 /* CDNetworks+CoreDataClass.swift */,
+				F8E178C525D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift */,
+				F8E5AE4B25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift */,
+				F8E5AE4C25CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8C811BF25CC7ECC00E5B5F8 /* CityBikes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C811ED25CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikes" */;
+			buildPhases = (
+				F8C811BC25CC7ECC00E5B5F8 /* Sources */,
+				F8C811BD25CC7ECC00E5B5F8 /* Frameworks */,
+				F8C811BE25CC7ECC00E5B5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CityBikes;
+			productName = CityBikes;
+			productReference = F8C811C025CC7ECC00E5B5F8 /* CityBikes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8C811D825CC7ECE00E5B5F8 /* CityBikesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C811F025CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikesTests" */;
+			buildPhases = (
+				F8C811D525CC7ECE00E5B5F8 /* Sources */,
+				F8C811D625CC7ECE00E5B5F8 /* Frameworks */,
+				F8C811D725CC7ECE00E5B5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C811DB25CC7ECE00E5B5F8 /* PBXTargetDependency */,
+			);
+			name = CityBikesTests;
+			productName = CityBikesTests;
+			productReference = F8C811D925CC7ECE00E5B5F8 /* CityBikesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8C811E325CC7ECE00E5B5F8 /* CityBikesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C811F325CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikesUITests" */;
+			buildPhases = (
+				F8C811E025CC7ECE00E5B5F8 /* Sources */,
+				F8C811E125CC7ECE00E5B5F8 /* Frameworks */,
+				F8C811E225CC7ECE00E5B5F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C811E625CC7ECE00E5B5F8 /* PBXTargetDependency */,
+			);
+			name = CityBikesUITests;
+			productName = CityBikesUITests;
+			productReference = F8C811E425CC7ECE00E5B5F8 /* CityBikesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8C811B825CC7ECC00E5B5F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F8C811BF25CC7ECC00E5B5F8 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F8C811D825CC7ECE00E5B5F8 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F8C811BF25CC7ECC00E5B5F8;
+					};
+					F8C811E325CC7ECE00E5B5F8 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F8C811BF25CC7ECC00E5B5F8;
+					};
+				};
+			};
+			buildConfigurationList = F8C811BB25CC7ECC00E5B5F8 /* Build configuration list for PBXProject "CityBikes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8C811B725CC7ECC00E5B5F8;
+			productRefGroup = F8C811C125CC7ECC00E5B5F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8C811BF25CC7ECC00E5B5F8 /* CityBikes */,
+				F8C811D825CC7ECE00E5B5F8 /* CityBikesTests */,
+				F8C811E325CC7ECE00E5B5F8 /* CityBikesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8C811BE25CC7ECC00E5B5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C8124025CCA25700E5B5F8 /* NaBarView.xib in Resources */,
+				F8C811D325CC7ECE00E5B5F8 /* LaunchScreen.storyboard in Resources */,
+				F8C8120A25CC83D800E5B5F8 /* MainVC.xib in Resources */,
+				F8FC9D7B25CDE93D007FFE38 /* CityBikesTVCell.xib in Resources */,
+				F8C811D025CC7ECE00E5B5F8 /* Assets.xcassets in Resources */,
+				F8C811CB25CC7ECC00E5B5F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811D725CC7ECE00E5B5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8AAF58025D09D9500397E95 /* CityBikesTVCell.xib in Resources */,
+				F8C8120B25CC83D800E5B5F8 /* MainVC.xib in Resources */,
+				F8C8124125CCA25700E5B5F8 /* NaBarView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811E225CC7ECE00E5B5F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8AAF58125D09D9600397E95 /* CityBikesTVCell.xib in Resources */,
+				F8C8120C25CC83D800E5B5F8 /* MainVC.xib in Resources */,
+				F8C8124225CCA25700E5B5F8 /* NaBarView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8C811BC25CC7ECC00E5B5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B1679D25CD0820005CB3A1 /* NetworkController.swift in Sources */,
+				F8E178C625D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E5AE5025CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
+				F8C8123925CCA25000E5B5F8 /* NavBarView.swift in Sources */,
+				F8FC9D6025CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
+				F8E4A33F25D0C26B006328F7 /* DropDownView.swift in Sources */,
+				F8C811CE25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld in Sources */,
+				F8C8122225CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8C8120725CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8FC9D7A25CDE93D007FFE38 /* CityBikesTVCell.swift in Sources */,
+				F8E178C925D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8FC9D8225CE0798007FFE38 /* CBImageView.swift in Sources */,
+				F8FFA11725CF3EBD006332AD /* CoreDataController.swift in Sources */,
+				F8C8122F25CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8C8125725CCA32100E5B5F8 /* NavController.swift in Sources */,
+				F8E5AE4D25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */,
+				F8C811C425CC7ECC00E5B5F8 /* AppDelegate.swift in Sources */,
+				F8C8121F25CC852500E5B5F8 /* Alias.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811D525CC7ECE00E5B5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E5AE4E25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */,
+				F8AAF57825D09D9100397E95 /* CityBikesTVCell.swift in Sources */,
+				F8C8122325CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8FC9D6125CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
+				F8C8123025CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8E178C725D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E4A34025D0C26B006328F7 /* DropDownView.swift in Sources */,
+				F8AAF58525D09DCA00397E95 /* CBImageView.swift in Sources */,
+				F8AAF57025D09D8C00397E95 /* NetworkController.swift in Sources */,
+				F8E178CA25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8C8122025CC852500E5B5F8 /* Alias.swift in Sources */,
+				F8E5AE5125CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
+				F8AAF56425D091BE00397E95 /* CityBikeResponseTests.swift in Sources */,
+				F8AAF56825D09D5D00397E95 /* CoreDataController.swift in Sources */,
+				F8C8123A25CCA25000E5B5F8 /* NavBarView.swift in Sources */,
+				F8C8120825CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8C8125825CCA32100E5B5F8 /* NavController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C811E025CC7ECE00E5B5F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E5AE4F25CFB1AC0036A9C5 /* CDLocation+CoreDataClass.swift in Sources */,
+				F8C8122425CC852500E5B5F8 /* Extensions.swift in Sources */,
+				F8FC9D6225CD9A93007FFE38 /* CityBikeResponse.swift in Sources */,
+				F8C8123125CC92F400E5B5F8 /* Colors.swift in Sources */,
+				F8E178C825D08559001BCAE3 /* CDNetworks+CoreDataClass.swift in Sources */,
+				F8E178CB25D08559001BCAE3 /* CDNetworks+CoreDataProperties.swift in Sources */,
+				F8E4A34125D0C26B006328F7 /* DropDownView.swift in Sources */,
+				F8AAF57C25D09D9100397E95 /* CityBikesTVCell.swift in Sources */,
+				F8C8122125CC852500E5B5F8 /* Alias.swift in Sources */,
+				F8E5AE5225CFB1AC0036A9C5 /* CDLocation+CoreDataProperties.swift in Sources */,
+				F8AAF56C25D09D5E00397E95 /* CoreDataController.swift in Sources */,
+				F8C811E925CC7ECE00E5B5F8 /* CityBikesUITests.swift in Sources */,
+				F8C8123B25CCA25000E5B5F8 /* NavBarView.swift in Sources */,
+				F8C8120925CC83D800E5B5F8 /* MainVC.swift in Sources */,
+				F8AAF57425D09D8C00397E95 /* NetworkController.swift in Sources */,
+				F8C8125925CCA32100E5B5F8 /* NavController.swift in Sources */,
+				F8AAF58925D09DCA00397E95 /* CBImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8C811DB25CC7ECE00E5B5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C811BF25CC7ECC00E5B5F8 /* CityBikes */;
+			targetProxy = F8C811DA25CC7ECE00E5B5F8 /* PBXContainerItemProxy */;
+		};
+		F8C811E625CC7ECE00E5B5F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C811BF25CC7ECC00E5B5F8 /* CityBikes */;
+			targetProxy = F8C811E525CC7ECE00E5B5F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8C811C925CC7ECC00E5B5F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8C811CA25CC7ECC00E5B5F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8C811D125CC7ECE00E5B5F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8C811D225CC7ECE00E5B5F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8C811EB25CC7ECE00E5B5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8C811EC25CC7ECE00E5B5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8C811EE25CC7ECE00E5B5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8C811EF25CC7ECE00E5B5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikes/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8C811F125CC7ECE00E5B5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CityBikes.app/CityBikes";
+			};
+			name = Debug;
+		};
+		F8C811F225CC7ECE00E5B5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CityBikes.app/CityBikes";
+			};
+			name = Release;
+		};
+		F8C811F425CC7ECE00E5B5F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CityBikes;
+			};
+			name = Debug;
+		};
+		F8C811F525CC7ECE00E5B5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P74CL4CTH;
+				INFOPLIST_FILE = CityBikesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HawkHeadDevelopment.CityBikesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CityBikes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8C811BB25CC7ECC00E5B5F8 /* Build configuration list for PBXProject "CityBikes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C811EB25CC7ECE00E5B5F8 /* Debug */,
+				F8C811EC25CC7ECE00E5B5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C811ED25CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C811EE25CC7ECE00E5B5F8 /* Debug */,
+				F8C811EF25CC7ECE00E5B5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C811F025CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C811F125CC7ECE00E5B5F8 /* Debug */,
+				F8C811F225CC7ECE00E5B5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C811F325CC7ECE00E5B5F8 /* Build configuration list for PBXNativeTarget "CityBikesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C811F425CC7ECE00E5B5F8 /* Debug */,
+				F8C811F525CC7ECE00E5B5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8C811CC25CC7ECC00E5B5F8 /* CityBikes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8C811CD25CC7ECC00E5B5F8 /* CityBikes.xcdatamodel */,
+			);
+			currentVersion = F8C811CD25CC7ECC00E5B5F8 /* CityBikes.xcdatamodel */;
+			path = CityBikes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F8C811B825CC7ECC00E5B5F8 /* Project object */;
+}

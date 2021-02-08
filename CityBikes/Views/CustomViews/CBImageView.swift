@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class CGImageView: UIImageView {
+class CBImageView: UIImageView {
     
     @IBInspectable var imageColor: UIColor = UIColor.clear {
         didSet{

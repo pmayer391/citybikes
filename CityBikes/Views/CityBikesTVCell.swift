@@ -9,7 +9,7 @@ import UIKit
 
 class CityBikesTVCell: UITableViewCell {
 
-    @IBOutlet weak var imgCity: CGImageView!
+    @IBOutlet weak var imgCity: CBImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
     @IBOutlet weak var additionalInfoView: UIView!

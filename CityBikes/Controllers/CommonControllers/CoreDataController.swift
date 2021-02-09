@@ -62,7 +62,18 @@ class CoreDataController {
             for cdNetwork in cdNetworks ?? [] {
                 self.backgroundContext.delete(cdNetwork)
             }
+            self.saveBGContext()
             self.saveNetworksOnBackground(networks)
+        }
+    }
+    
+    private func saveBGContext(){
+        if self.backgroundContext.hasChanges{
+            do {
+                try self.backgroundContext.save()
+            } catch let error as NSError{
+                debugPrint("Could Not Save Core Data: \(error), \(error.userInfo)")
+            }
         }
     }
     
@@ -81,13 +92,7 @@ class CoreDataController {
                 cdLocation.longitude = network.location?.longitude ?? 0.0
                 cdNetwork.location = cdLocation
             }
-            if self.backgroundContext.hasChanges{
-                do {
-                    try self.backgroundContext.save()
-                } catch let error as NSError{
-                    debugPrint("Could Not Save Core Data: \(error), \(error.userInfo)")
-                }
-            }
+            self.saveBGContext()
         }
     }
     

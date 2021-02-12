@@ -52,7 +52,7 @@ class CityBikeResponse : NSObject, Codable {
 }
 
 class Networks : NSObject, Codable {
-//    let company : [String]?
+    var company : CompanyObj?
     var href : String?
     var id : String?
     var location : Location?
@@ -68,7 +68,7 @@ class Networks : NSObject, Codable {
     }
 
     enum CodingKeys: String, CodingKey {
-//        case company = "company"
+        case company = "company"
         case href = "href"
         case id = "id"
         case location = "location"
@@ -77,7 +77,7 @@ class Networks : NSObject, Codable {
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-//        company = try values.decodeIfPresent([String].self, forKey: .company)
+        company = try values.decodeIfPresent(CompanyObj.self, forKey: .company)
         href = try values.decodeIfPresent(String.self, forKey: .href)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         location = try values.decodeIfPresent(Location.self, forKey: .location)
@@ -107,6 +107,37 @@ class Location : NSObject, Codable {
         country = try values.decodeIfPresent(String.self, forKey: .country)
         latitude = try values.decodeIfPresent(Double.self, forKey: .latitude)
         longitude = try values.decodeIfPresent(Double.self, forKey: .longitude)
+    }
+}
+
+//Note: CompanyObj varies between type String and String Array sent from the API
+enum CompanyObj: Codable {
+    var strVal: String? {
+        switch self {
+        case .stringArray(let value): return value.joined(separator: ", ")
+        case .string(let value): return value
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        print("Encodeable Entered")
+    }
+    
+    case stringArray([String]), string(String)
+    
+    init(from decoder: Decoder) throws {
+        if let stringArray = try? decoder.singleValueContainer().decode([String].self) {
+            self = .stringArray(stringArray)
+            return
+        }
+        if let string = try? decoder.singleValueContainer().decode(String.self) {
+            self = .string(string)
+            return
+        }
+        throw ParsingError.missingValue
+    }
+    enum ParsingError:Error {
+        case missingValue
     }
 }
 

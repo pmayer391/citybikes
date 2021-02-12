@@ -31,7 +31,7 @@ class NetworkController{
         do {
             return try decoder.decode(CityBikeResponse.self, from: data)
         } catch {
-            debugPrint("JSON ERROR: \(error.localizedDescription)")
+            debugPrint("JSON ERROR: \(error)")
         }
         return nil
     }

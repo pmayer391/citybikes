@@ -23,7 +23,7 @@ class CityBikesTVCell: UITableViewCell {
     }
     
     func configureCell(_ networkObj: Networks){
-        lblTitle.text = networkObj.name ?? "--"
+        lblTitle.text = "\(networkObj.name ?? "") - \(networkObj.company?.strVal ?? "")"
         lblSubTitle.text = "\(networkObj.location?.city ?? "--"), \(networkObj.location?.country ?? "--")"
         lblLat.text = "LAT: \(networkObj.location?.latitude ?? 0.000)"
         lblLon.text = "LONG: \(networkObj.location?.longitude ?? 0.000)"

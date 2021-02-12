@@ -30,13 +30,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-zh-1sr">
-                                        <rect key="frame" x="75" y="8" width="32.5" height="20.5"/>
+                                        <rect key="frame" x="75" y="8" width="282" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIo-Ro-NpE">
-                                        <rect key="frame" x="75" y="30" width="21.5" height="12"/>
+                                        <rect key="frame" x="75" y="30" width="282" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -44,10 +44,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IIo-Ro-NpE" secondAttribute="trailing" constant="15" id="0QU-IM-VNS"/>
                                     <constraint firstItem="W8f-h9-SR5" firstAttribute="centerY" secondItem="WuW-RP-GJm" secondAttribute="centerY" id="F4e-os-M2s"/>
                                     <constraint firstItem="hL4-zh-1sr" firstAttribute="top" secondItem="W8f-h9-SR5" secondAttribute="top" constant="3" id="HkS-vD-216"/>
                                     <constraint firstItem="IIo-Ro-NpE" firstAttribute="leading" secondItem="W8f-h9-SR5" secondAttribute="trailing" constant="15" id="WFS-yh-GmQ"/>
                                     <constraint firstItem="W8f-h9-SR5" firstAttribute="leading" secondItem="WuW-RP-GJm" secondAttribute="leading" constant="20" id="hKe-Wc-gze"/>
+                                    <constraint firstAttribute="trailing" secondItem="hL4-zh-1sr" secondAttribute="trailing" constant="15" id="ipc-OK-dvp"/>
                                     <constraint firstItem="hL4-zh-1sr" firstAttribute="leading" secondItem="W8f-h9-SR5" secondAttribute="trailing" constant="15" id="tdP-Sc-Wxb"/>
                                     <constraint firstItem="IIo-Ro-NpE" firstAttribute="bottom" secondItem="W8f-h9-SR5" secondAttribute="bottom" constant="-3" id="xhm-bV-14K"/>
                                 </constraints>
